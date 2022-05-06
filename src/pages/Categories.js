@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 function Categories() {
   return (
@@ -7,5 +7,4 @@ function Categories() {
     </div>
   );
 }
-
 export default Categories;
