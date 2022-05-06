@@ -12,10 +12,9 @@ You can find live project at https://amrendrakind.github.io/bookstore-react/
 
 ## Built With
 
-- React JS
+- React JS with Redux
 - JSX
 - JavaScripts
-- Webpack
 - GitFlow
 
 ## Live Demo (Link for My BookStore Project)
