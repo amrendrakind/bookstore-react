@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Categories from './pages/Categories';
 import NotFound from './pages/NotFound';
 import NavBar from './componenets/NavBar/NavBar';
+import './App.css';
 
 function App() {
   return (

@@ -1,0 +1,6 @@
+.book {
+  display: flex;
+  justify-content: left;
+  gap: 10px;
+  align-items: center;
+}

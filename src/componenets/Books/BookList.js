@@ -1,11 +1,36 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import Book from './Book';
 
-function BookList() {
+function BookList(props) {
+  const { bookList } = props;
+
   return (
-    <h1>
-      Hello from BookList
-    </h1>
+    <ul>
+      {bookList.map((book) => (
+        <Book
+          key={book.id}
+          book={book}
+        />
+      ))}
+    </ul>
   );
 }
 
 export default BookList;
+
+BookList.defaultProps = {
+  bookList: [],
+};
+
+BookList.propTypes = {
+  bookList: PropTypes.arrayOf(
+    PropTypes.objectOf(
+      {
+        id: PropTypes.string,
+        title: PropTypes.string,
+        author: PropTypes.string,
+      },
+    ),
+  ),
+};
