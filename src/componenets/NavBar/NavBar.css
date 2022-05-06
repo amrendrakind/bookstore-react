@@ -1,3 +1,13 @@
-* {
-  margin: 0;
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+}
+
+nav ul li {
+  margin-right: 20px;
 }
