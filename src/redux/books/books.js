@@ -14,7 +14,7 @@ export function removeBook(bookId) {
   };
 }
 
-export const reducer = (initialState = [], action) => {
+export const reducerBook = (initialState = [], action) => {
   switch (action.type) {
     case ADD_NEW_BOOK:
       return [...initialState, action.payload];
