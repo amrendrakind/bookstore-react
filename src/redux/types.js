@@ -1,3 +1,3 @@
-export const ADD_NEW_BOOK = 'ADD_BOOK';
-export const REMOVE_BOOK = 'REMOVE_BOOK';
-export const CHECK_STATUS = 'CHECK_STATUS';
+export const ADD_NEW_BOOK = 'bookstore/books/ADD_BOOK';
+export const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
+export const CHECK_STATUS = 'bookstore/categories/CHECK_STATUS';
