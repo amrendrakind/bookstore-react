@@ -1,14 +1,10 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { legacy_createStore as createStore, combineReducers } from 'redux';
 import reducerCategories, { checkStatus } from './categories/categories';
 import reducerBook, { addBook, removeBook } from './books/books';
 
-const store = configureStore({
-  reducer: {
-    Books: reducerBook,
-    Categories: reducerCategories,
-  },
-});
+const rootReducer = combineReducers({ Books: reducerBook, Categories: reducerCategories });
 
+const store = createStore(rootReducer);
 store.dispatch(checkStatus());
 store.dispatch(addBook());
 store.dispatch(removeBook());
