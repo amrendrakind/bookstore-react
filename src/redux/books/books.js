@@ -29,7 +29,7 @@ const defualtBooks = [
   },
 ];
 
-export function addBook(newBook) {
+export function addNewBook(newBook) {
   return {
     type: ADD_NEW_BOOK,
     payload: newBook,
