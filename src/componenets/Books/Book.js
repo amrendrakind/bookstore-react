@@ -9,7 +9,7 @@ function Book(props) {
   const { book } = props;
   const { id, author, title } = book;
 
-  const handleDispatch = () => {
+  const handleRemove = () => {
     dispatch(removeBook(id));
   };
 
@@ -21,7 +21,7 @@ function Book(props) {
       {author}
 
       <span>
-        <button type="button" onClick={handleDispatch}>Remove</button>
+        <button type="button" onClick={handleRemove}>Remove</button>
       </span>
     </li>
   );
