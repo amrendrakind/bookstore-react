@@ -9,7 +9,7 @@ function Book(props) {
   const { book } = props;
   const { id, author, title } = book;
 
-  const handleDispatch = (id) => {
+  const handleDispatch = () => {
     dispatch(removeBook(id));
   };
 
