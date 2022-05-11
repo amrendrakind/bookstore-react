@@ -11,7 +11,7 @@ function AddBook() {
   const onChange = (e) => {
     setInputText({
       ...inputText,
-      [e.target.name]: e.target.name,
+      [e.target.name]: e.target.value,
     });
   };
 
