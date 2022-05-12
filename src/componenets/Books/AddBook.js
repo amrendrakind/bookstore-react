@@ -24,7 +24,6 @@ function AddBook() {
       author: inputText.author,
       category: 'default',
     };
-
     dispatch(addNewBooks(newBook));
 
     setInputText({

@@ -62,6 +62,12 @@ export function removeBook(bookId) {
   };
 }
 
+export const removeBooks = (id) => async (dispatch) => {
+  await ApiServices.removeBook(id);
+  // console.log(id);
+  dispatch(removeBook(id));
+};
+
 export default function reducerBook(initialState = defualtBooks, action) {
   switch (action.type) {
     case ADD_NEW_BOOK:

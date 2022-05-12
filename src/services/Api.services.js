@@ -15,6 +15,17 @@ const addBook = async (book) => {
   return response;
 };
 
+const removeBook = async (id) => {
+  const response = await fetch(`${BookURL}/${id}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ item_id: id }),
+  });
+  return response;
+};
+
 const getBooks = async () => {
   const response = await fetch(BookURL, {
     method: 'GET',
@@ -29,4 +40,5 @@ const getBooks = async () => {
 export default {
   addBook,
   getBooks,
+  removeBook,
 };
