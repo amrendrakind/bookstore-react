@@ -1,34 +1,7 @@
-import { v4 as uuidv4 } from 'uuid';
 import { ADD_NEW_BOOK, REMOVE_BOOK, GET_BOOKS_API } from '../types';
 import ApiServices from '../../services/Api.services';
 
-const defualtBooks = [
-  {
-    id: uuidv4(),
-    title: 'Power Shift',
-    author: 'Alvin Toffler',
-  },
-  {
-    id: uuidv4(),
-    title: 'My Journey',
-    author: 'Dr. A.P.J. Abdul Kalam',
-  },
-  {
-    id: uuidv4(),
-    title: 'Making of New India',
-    author: 'Dr. Bibek Debroy',
-  },
-  {
-    id: uuidv4(),
-    title: 'Whispers of Time',
-    author: 'Dr. Krishna Saksena',
-  },
-  {
-    id: uuidv4(),
-    title: 'Godan',
-    author: 'Premchand',
-  },
-];
+const defualtBooks = [];
 
 export function getBooksAPI(books) {
   const APIBooks = Object.entries(books).map(([key, value]) => ({ ...value[0], id: key }));

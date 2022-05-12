@@ -38,7 +38,7 @@ function AddBook() {
         <input
           type="text"
           className="inputTextBox"
-          placeholder="Book"
+          placeholder="Book Name"
           value={inputText.title}
           name="title"
           onChange={onChange}
@@ -47,7 +47,7 @@ function AddBook() {
         <input
           type="text"
           className="inputTextBox"
-          placeholder="Author"
+          placeholder="Author Name"
           value={inputText.author}
           name="author"
           onChange={onChange}
