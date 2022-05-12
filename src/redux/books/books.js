@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from 'uuid';
 import { ADD_NEW_BOOK, REMOVE_BOOK, GET_BOOKS_API } from '../types';
-import APIService from '../../services/Api.services';
+import ApiServices from '../../services/Api.services';
 
 const defualtBooks = [
   {
@@ -39,7 +39,7 @@ export function getBooksAPI(books) {
 }
 
 export const bookFromAPI = () => async (dispatch) => {
-  const response = await APIService.getBooks();
+  const response = await ApiServices.getBooks();
   dispatch(getBooksAPI(response));
 };
 
@@ -49,6 +49,11 @@ export function addNewBook(newBook) {
     payload: newBook,
   };
 }
+
+export const addNewBooks = (newBook) => async (dispatch) => {
+  await ApiServices.addBook(newBook);
+  dispatch(addNewBook({ ...newBook, id: newBook.item_id }));
+};
 
 export function removeBook(bookId) {
   return {
