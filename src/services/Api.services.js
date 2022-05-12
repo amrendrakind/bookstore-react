@@ -1,0 +1,32 @@
+const BaseURL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi';
+
+const AppID = 'alwaysPositive4You';
+
+const BookURL = `${`${BaseURL}/apps/${AppID}/books`}`;
+
+const addBook = async (book) => {
+  const response = await fetch(BookURL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(book),
+  });
+  return response;
+};
+
+const getBooks = async () => {
+  const response = await fetch(BookURL, {
+    method: 'GET',
+    headers: {
+      Accept: 'application/json',
+    },
+  });
+  const booksData = await response.json();
+  return booksData;
+};
+
+export default {
+  addBook,
+  getBooks,
+};
