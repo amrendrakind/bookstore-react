@@ -19,7 +19,7 @@ const Navbar = () => {
 
   return (
     <nav className="nav-bar">
-      <h2 className="nav-brand">Bookstore CMS</h2>
+      <h2 className="nav-brand"><a href="/">Bookstore CMS</a></h2>
       <ul className="nav-links">
         {links.map((link) => (
           <li className="nav-link" key={link.id}>
