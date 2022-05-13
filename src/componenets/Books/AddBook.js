@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { addNewBook } from '../../redux/books/books';
+import { addNewBooks } from '../../redux/books/books';
 
 function AddBook() {
   const [inputText, setInputText] = useState({ title: '', author: '' });
@@ -19,12 +19,12 @@ function AddBook() {
     e.preventDefault();
 
     const newBook = {
-      id: uuidv4(),
+      item_id: uuidv4(),
       title: inputText.title,
       author: inputText.author,
+      category: 'default',
     };
-
-    dispatch(addNewBook(newBook));
+    dispatch(addNewBooks(newBook));
 
     setInputText({
       title: '',
@@ -38,7 +38,7 @@ function AddBook() {
         <input
           type="text"
           className="inputTextBox"
-          placeholder="Book"
+          placeholder="Book Name"
           value={inputText.title}
           name="title"
           onChange={onChange}
@@ -47,7 +47,7 @@ function AddBook() {
         <input
           type="text"
           className="inputTextBox"
-          placeholder="Author"
+          placeholder="Author Name"
           value={inputText.author}
           name="author"
           onChange={onChange}
