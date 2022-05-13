@@ -38,9 +38,9 @@ input {
   border-radius: 3px;
   background-color: #0290ff;
   border: none;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   color: #fff;
-  font-size: .813rem;
+  font-size: 0.813rem;
   font-weight: 700;
-  font-family: "Roboto Slab",serif;
+  font-family: "Roboto Slab", serif;
 }
