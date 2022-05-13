@@ -22,7 +22,7 @@ const Navbar = () => {
       <h2 className="nav-brand">Bookstore CMS</h2>
       <ul className="nav-links">
         {links.map((link) => (
-          <li key={link.id}>
+          <li className="nav-link" key={link.id}>
             <NavLink to={link.path} exact="true">
               {link.text}
             </NavLink>
