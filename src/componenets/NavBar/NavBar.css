@@ -16,3 +16,8 @@ nav ul li {
   display: flex;
   flex-direction: row;
 }
+
+.navMenu {
+  display: flex;
+  flex-direction: row;
+}
