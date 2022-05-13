@@ -13,7 +13,7 @@ function Categories() {
     <div>
       <button type="button" onClick={handleStatus}>Check status</button>
       <br />
-      {categories}
+      <div className="check-status">{categories}</div>
     </div>
   );
 }

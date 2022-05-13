@@ -8,3 +8,8 @@
   width: 100%;
   margin: 2.5rem 0 1.813rem;
 }
+
+.check-status {
+  font-size: 40px;
+  font-weight: bold;
+}
