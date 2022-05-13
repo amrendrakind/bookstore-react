@@ -18,9 +18,9 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="navBar">
-      <h2>Bookstore CMS</h2>
-      <ul className="navMenu">
+    <nav className="nav-bar">
+      <h2 className="nav-brand">Bookstore CMS</h2>
+      <ul className="nav-links">
         {links.map((link) => (
           <li key={link.id}>
             <NavLink to={link.path} exact="true">
