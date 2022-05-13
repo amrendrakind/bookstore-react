@@ -15,15 +15,18 @@ function Book(props) {
 
   return (
 
-    <li key={id} className="book">
-      {title}
-      {' '}
-      {author}
+    <li key={id}>
+      <div className="book">
+        {title}
+        {' '}
+        {author}
 
-      <span>
-        <button type="button" onClick={handleRemove}>Remove</button>
-      </span>
+        <span>
+          <button type="button" onClick={handleRemove}>Remove</button>
+        </span>
+      </div>
     </li>
+
   );
 }
 

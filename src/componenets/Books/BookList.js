@@ -12,7 +12,7 @@ function BookList() {
   }, [dispatch]);
 
   return (
-    <ul>
+    <ul className="books">
       {books.map((book) => (
         <Book
           key={book.id}
