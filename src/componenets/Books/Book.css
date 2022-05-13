@@ -61,3 +61,68 @@ input {
   border: 1px solid #e8e8e8;
   padding: 2rem;
 }
+
+.book-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.book-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.book-category {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  opacity: 0.5;
+}
+
+.book-title {
+  margin-top: 0.188rem;
+  font-size: 1.375rem;
+  letter-spacing: -0.2px;
+}
+
+.book-author {
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #4386bf;
+}
+
+.book-author,
+.book-title {
+  font-family: "Roboto Slab", serif;
+}
+
+.book-category,
+.book-title {
+  font-weight: 700;
+  color: #121212;
+}
+
+.container-buttons {
+  display: flex;
+  align-items: center;
+  margin-top: 1.313rem;
+  gap: 20px;
+}
+
+.action-button {
+  font-family: "Roboto Slab", serif;
+  background-color: transparent;
+  border: none;
+  color: #4386bf;
+  font-size: 0.875rem;
+  font-weight: 300;
+  align-items: center;
+  cursor: pointer;
+}
+
+.vertical-divider {
+  width: 0.125rem;
+  height: 1.5rem;
+  background-color: #e8e8e8;
+  margin: 0 1rem;
+}

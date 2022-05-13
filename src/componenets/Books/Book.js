@@ -7,7 +7,9 @@ import { removeBooks } from '../../redux/books/books';
 function Book(props) {
   const dispatch = useDispatch();
   const { book } = props;
-  const { id, author, title } = book;
+  const {
+    id, author, title, category,
+  } = book;
 
   const handleRemove = () => {
     dispatch(removeBooks(id));
@@ -17,13 +19,30 @@ function Book(props) {
 
     <li key={id}>
       <div className="book">
-        {title}
-        {' '}
-        {author}
+        <div className="book-content">
+          <div className="book-info">
+            <div className="book-category">
+              {category}
+            </div>
 
-        <span>
-          <button type="button" onClick={handleRemove}>Remove</button>
-        </span>
+            <div className="book-title">
+              {title}
+            </div>
+
+            <div className="book-author">
+              {author}
+            </div>
+
+            <div className="container-buttons">
+              <button className="action-button" type="button">Comments</button>
+              <div className="vertical-divider" />
+              <button className="action-button" type="button" onClick={handleRemove}>Remove</button>
+              <div className="vertical-divider" />
+              <button className="action-button" type="button">Edit</button>
+            </div>
+          </div>
+
+        </div>
       </div>
     </li>
 
