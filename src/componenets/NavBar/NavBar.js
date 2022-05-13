@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { FaUser } from 'react-icons/fa';
 import './NavBar.css';
 
 const Navbar = () => {
@@ -28,6 +29,7 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
+      <div className="account-icon"><FaUser className="user-icon" /></div>
     </nav>
   );
 };
