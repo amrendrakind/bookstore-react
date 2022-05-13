@@ -15,6 +15,9 @@ function Book(props) {
     dispatch(removeBooks(id));
   };
 
+  const complete = Math.floor(Math.random() * 100);
+  const percentageComplete = `${complete}%`;
+  const currentChapterNumber = `CHAPTER ${Math.floor(complete / 5, 0)}`;
   return (
 
     <li key={id}>
@@ -46,7 +49,7 @@ function Book(props) {
               <div className="circular-progress" />
             </div>
             <div className="progress-statistics">
-              <p className="percent-complete">64%</p>
+              <p className="percent-complete">{percentageComplete}</p>
               <p className="completed">Completed</p>
             </div>
             <div className="progress-divider" />
@@ -54,7 +57,7 @@ function Book(props) {
           <div className="current-chapter-container">
             <div>
               <p className="current-chapter-label">CURRENT CHAPTER</p>
-              <p className="current-chapter-number">CHAPTER 17</p>
+              <p className="current-chapter-number">{currentChapterNumber}</p>
             </div>
             <button className="update-progress-button" type="button">UPDATE PROGRESS</button>
           </div>
