@@ -33,12 +33,12 @@ function AddBook() {
   };
   return (
     <>
-      <h3 className="heading">ADD NEW BOOK</h3>
+      <h3 className="form-title">ADD NEW BOOK</h3>
       <form className="form-container" onSubmit={submitHandler}>
         <input
           type="text"
           className="inputTextBox"
-          placeholder="Book Name"
+          placeholder="Book title"
           value={inputText.title}
           name="title"
           onChange={onChange}
@@ -53,7 +53,7 @@ function AddBook() {
           onChange={onChange}
           required
         />
-        <button type="submit"> Add Book</button>
+        <button className="add-book-button" type="submit"> Add Book</button>
       </form>
     </>
   );
