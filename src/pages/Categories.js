@@ -11,7 +11,7 @@ function Categories() {
 
   return (
     <div>
-      <button type="button" onClick={handleStatus}>Check status</button>
+      <button className="check-status-button" type="button" onClick={handleStatus}>Check status</button>
       <br />
       <div className="check-status">{categories}</div>
     </div>
