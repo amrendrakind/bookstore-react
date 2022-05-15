@@ -5,6 +5,7 @@ import BookList from '../componenets/Books/BookList';
 const Home = () => (
   <>
     <BookList />
+    <div className="horizontal-divider" />
     <AddBook />
   </>
 );
